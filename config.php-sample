@@ -1,0 +1,7 @@
+<?php
+$REMOTE_USER = "preseem";
+$REMOTE_PATH = "/home/$REMOTE_USER/data";
+$ROUTER_IP = "192.168.1.100";
+$ROUTER_USER = "admin";
+$ROUTER_PASS = "secret";
+
