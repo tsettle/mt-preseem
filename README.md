@@ -38,4 +38,8 @@ If there's a comment, I'm using that, otherwise, I'm using the host-name.  If ne
 # DO NOT USE THIS SCRIPT!
 This is a quick and dirty piece of crap, just don't do it.  If you're gonna do Preseem, integrate it with your billing system.  Ours is a PITA and will take some time to get done.  Hopefully, sooner rather than later.
 
+## Then again...
 
+I am considering building a UI to manage this information and packing the comments with serialized information (or maybe JSON?).  ROS allows for some stupid big comments, and while it's not easy to do from Winbox, it will handle it just fine, even properly escaping special characters in an export.
+
+For that, I'm considering a pure javascript app, perhaps using the Quasar Framework, which is really quite beautiful.  Just need to find a javascript implementation of the (secure) MT API.
