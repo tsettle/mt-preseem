@@ -1,4 +1,5 @@
 <?php
+$REMOTE_HOST = "192.168.1.200";
 $REMOTE_USER = "preseem";
 $REMOTE_PATH = "/home/$REMOTE_USER/data";
 $ROUTER_IP = "192.168.1.100";

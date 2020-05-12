@@ -45,7 +45,7 @@ $down = array(
 
 // Establish SSH connection to preseem
 
-$connection = ssh2_connect('172.23.6.20', 22, array('hostkey'=>'ssh-rsa'));
+$connection = ssh2_connect($REMOTE_HOST, 22, array('hostkey'=>'ssh-rsa'));
 
 if (ssh2_auth_pubkey_file($connection, $REMOTE_USER,
         '/home/preseem/.ssh/id_rsa.pub',
