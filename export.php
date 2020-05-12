@@ -160,13 +160,13 @@ for ($leases->rewind(); $leases->valid(); $leases->next())
 {
     try {
         $value = $leases->current();
-        if(array_key_exists($value['address'],$skip)) {
+        if(array_key_exists($value['active-address'],$skip)) {
           print_r ($value);
           continue;
         }
 
         if(array_key_exists('comment',$value)) {
-            $comment = $value["comment"];
+            $comment = preg_replace('/(\s*\(.*\))/', '', $value['comment']);
         } elseif (array_key_exists('host-name',$value)) {
             $comment = $value["host-name"];
         } else {
@@ -176,7 +176,7 @@ for ($leases->rewind(); $leases->valid(); $leases->next())
         if(array_key_exists($value['address-lists'],$down))
         {
             fputcsv($fileClients,array(
-                $value["address"],
+                $value["active-address"],
                 $value["mac-address"],
                 $value["address-lists"],
                 $down[$value["address-lists"]],
